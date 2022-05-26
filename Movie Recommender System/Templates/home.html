@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %} 
+    Project By: Yashaswi Aryan(Reg. No.:200968186, Batch: IV)
+    <br>
+    <br>
+    <br>
+    <script>
+        $(document).ready(function() {
+            $("#ui_button").click(function() {
+                $('.ui.modal').modal('show');
+            });
+
+            $("#save").click(function() {
+
+                $('.ui.modal').modal('hide');
+            });
+        });
+    </script>
+    <form method="get">
+        <div class="ui input">
+            <input name="prompt" type="text" placeholder="User_id" value="{{ User_id }}">
+            <br>
+            <div class="ui pointing label">
+                Please enter a valic user id
+            </div>
+        </div>
+
+        <button type="submit" class="ui button primary">Filter</button>
+    </form> 
+
+    <br>
+    <div class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+            Add Stocks
+        </div>
+        <div class="content">
+        
+        </div>
+        <div class="actions">
+            <button id="save" class = "ui button">
+                Done
+            </button>
+        </div>
+    </div>
+
+    
+{% endblock %}
